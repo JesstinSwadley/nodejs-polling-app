@@ -1,16 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const { createPoll } = require("../controllers/poll.controller");
 
-router.post("/", (req, res) => {
-	let body = req.body
-
-	console.log(body)
-
-	try {
-		res.send("Poll POST Request");
-	} catch (error) {
-		res.send("error")
-	}
-});
+router.post("/", createPoll);
 
 module.exports = router;
