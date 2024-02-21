@@ -4,10 +4,11 @@ const createPoll = async (req, res) => {
 	let question = req.body.question
 
 	try {
-		await Poll.create({
+		const poll = await Poll.create({
 			question
 		});
-		res.send("Poll was added to the database table");
+		
+		res.send(poll);
 	} catch (error) {
 		res.send(error);
 	}

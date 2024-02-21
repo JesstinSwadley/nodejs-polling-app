@@ -9,11 +9,6 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.UUID,
 			defaultValue: DataTypes.UUIDV4,
 			primaryKey: true
-		},
-		created_at: {
-			type: DataTypes.DATEONLY,
-			allowNull: false,
-			defaultValue: DataTypes.NOW,
 		}
 	});
 
