@@ -16,8 +16,11 @@ const sequelize = new Sequelize(
 	}
 );
 
+// Initalize Sequelize
 const db = {}
 db.sequelize = sequelize;
+
+// Sequelize Models
 db.models = {};
 db.models.Poll = require("./poll.model")(sequelize, DataTypes);
 

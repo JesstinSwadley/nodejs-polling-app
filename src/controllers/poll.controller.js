@@ -1,4 +1,4 @@
-const { models: {Poll} } = require("../models/db");
+const { models: { Poll } } = require("../models/db");
 
 const createPoll = async (req, res) => {
 	let question = req.body.question
